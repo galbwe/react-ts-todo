@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import InputField from "./components/InputField";
-import Todo from "./components/Todo";
+import InputField from "./components/InputField/InputField";
+import Todo from "./components/Todo/Todo";
 
 interface Todo {
   title: string;
@@ -15,7 +15,7 @@ const App: React.FC = () => {
   let [todos, setTodos] = useState<Todo[]>([]);
 
   const createTodo = (title: string) => {
-    setTodos([...todos, { title, isEditing: false, editTitle: "" }]);
+    setTodos([...todos, { title, isEditing: false, editTitle: title }]);
     setText("");
   };
 
@@ -73,14 +73,14 @@ const App: React.FC = () => {
               }
               handleSubmit={() =>
                 updateTodo(
-                  { title: editTitle, isEditing: false, editTitle: "" },
+                  { title: editTitle, isEditing: false, editTitle: editTitle },
                   i
                 )
               }
               handleKeyPress={(e: any) => {
                 if (e.code === "Enter") {
                   updateTodo(
-                    { title: editTitle, isEditing: false, editTitle: "" },
+                    { title: editTitle, isEditing: false, editTitle: editTitle },
                     i
                   );
                 }
