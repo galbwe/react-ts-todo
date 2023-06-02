@@ -56,7 +56,7 @@ const App: React.FC = () => {
         handleKeyPress={handleKeyPress}
         handleSubmit={submitInput}
       />
-      <ul>
+      <ul className="Todos">
         {todos.map(({ title, isEditing, editTitle }, i) => {
           return (
             <Todo

@@ -3,6 +3,7 @@ import {
   MouseEventHandler,
   KeyboardEventHandler,
 } from "react";
+import styles from './InputField.module.css';
 
 interface InputFieldProps {
   text: string;
@@ -18,9 +19,9 @@ const InputField = ({
   handleKeyPress,
 }: InputFieldProps) => {
   return (
-    <div className="InputField">
+    <div className={styles.InputField}>
       <input value={text} onChange={handleChange} onKeyDown={handleKeyPress} />
-      <button onClick={handleSubmit}>{"Submit"}</button>
+      <button onClick={handleSubmit}>{"Create"}</button>
     </div>
   );
 };

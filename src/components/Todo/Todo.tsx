@@ -4,6 +4,8 @@ import React, {
   MouseEventHandler,
 } from "react";
 
+import styles from './Todo.module.css'
+
 interface TodoProps {
   title: string;
   isEditing: boolean;
@@ -26,19 +28,23 @@ const Todo = ({
   handleKeyPress,
 }: TodoProps) => {
   return (
-    <div className="Todo">
-      {isEditing ? (
-        <input
-          value={editTitle}
-          onChange={handleEdit}
-          onKeyDown={handleKeyPress}
-        />
-      ) : (
-        <h2>{title}</h2>
-      )}
-      <button onClick={handleDelete}>Delete</button>
-      <button onClick={toggleEdit}>Edit</button>
-      {isEditing && <button onClick={handleSubmit}>Submit</button>}
+    <div className={styles.Todo}>
+      <div className={styles.Content}>
+        {isEditing ? (
+          <input
+            value={editTitle}
+            onChange={handleEdit}
+            onKeyDown={handleKeyPress}
+          />
+        ) : (
+          <p>{title}</p>
+        )}
+      </div>
+      <div className={styles.Buttons}>
+        {!isEditing && <button onClick={handleDelete}>Delete</button>}
+        {!isEditing && <button onClick={toggleEdit}>Edit</button>}
+        {isEditing && <button onClick={handleSubmit}>Submit</button>}
+      </div>
     </div>
   );
 };

@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+button {
+    /* button size */
+    width: 75px;
+    aspect-ratio: 2;
+
+    /* button shape */
+    border: 1px solid whitesmoke;
+    border-radius: 4px;
+    margin: 5px;
+
+    /* colors */
+    background-color: rgb(60, 56, 254);
+    color: whitesmoke;
+
+    /* text */
+    color: whitesmoke;
+    font-family: "Neucha", cursive;
+    font-size: 1.2em;
+}

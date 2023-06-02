@@ -10,6 +10,16 @@
   font-family: "Neucha", cursive;
 }
 
+.Todos {
+  margin-left: 3rem;
+  margin-right: 3rem;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+}
+
 .heading {
   text-transform: uppercase;
   font-size: 40px;

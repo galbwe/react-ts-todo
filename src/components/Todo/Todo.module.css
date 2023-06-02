@@ -1,0 +1,38 @@
+.Todo {
+    margin: 0.5rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    border: 2px solid #fff;
+    
+    max-width: 12rem;
+    max-height: 10rem;
+
+    background: linear-gradient(85deg,hwb(254 0% 60%),hsl(250, 100%, 35%));
+    color: #fff;
+
+    flex: 0 0 6rem; 
+
+    display: flex;
+    flex-direction: column;
+}
+
+.Content {
+    width: 100%;
+    flex-grow: 5;
+    align-self: flex-start;
+
+    text-align: center;
+    white-space: initial;
+}
+
+.Buttons {
+    width: 100%;
+    height: 20%;
+
+    align-self: flex-end;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
